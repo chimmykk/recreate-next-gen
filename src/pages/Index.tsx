@@ -3,6 +3,8 @@ import UploadLogs from '../components/dashboard/UploadLogs';
 import DonutChart from '../components/dashboard/DonutChart';
 import ResultsCard from '../components/dashboard/ResultsCard';
 import FileUpload from '../components/dashboard/FileUpload';
+import DownloadProgress from '../components/dashboard/DownloadProgress';
+import MetricsChart from '../components/dashboard/MetricsChart';
 
 const Index = () => {
   return (
@@ -42,16 +44,26 @@ const Index = () => {
             <ResultsCard />
           </div>
 
+          {/* Download Progress */}
+          <div className="animate-fade-up" style={{ animationDelay: '0.3s' }}>
+            <DownloadProgress />
+          </div>
+
           {/* Charts */}
-          <div className="lg:col-span-2 bg-white p-6 rounded-lg shadow-sm animate-fade-up" style={{ animationDelay: '0.3s' }}>
+          <div className="lg:col-span-2 bg-white p-6 rounded-lg shadow-sm animate-fade-up" style={{ animationDelay: '0.4s' }}>
             <div className="flex justify-around">
               <DonutChart value={3.92} title="TimeStamp" />
               <DonutChart value={3.3} title="Boot-temp" />
             </div>
           </div>
 
+          {/* Metrics Chart */}
+          <div className="lg:col-span-4 animate-fade-up" style={{ animationDelay: '0.5s' }}>
+            <MetricsChart />
+          </div>
+
           {/* Upload Logs */}
-          <div className="lg:col-span-2 animate-fade-up" style={{ animationDelay: '0.4s' }}>
+          <div className="lg:col-span-2 animate-fade-up" style={{ animationDelay: '0.6s' }}>
             <UploadLogs />
           </div>
         </div>
