@@ -2,6 +2,7 @@ import TimeDisplay from '../components/dashboard/TimeDisplay';
 import UploadLogs from '../components/dashboard/UploadLogs';
 import DonutChart from '../components/dashboard/DonutChart';
 import ResultsCard from '../components/dashboard/ResultsCard';
+import FileUpload from '../components/dashboard/FileUpload';
 
 const Index = () => {
   return (
@@ -31,9 +32,9 @@ const Index = () => {
             <TimeDisplay />
           </div>
 
-          {/* Upload Logs */}
+          {/* File Upload */}
           <div className="lg:col-span-2 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            <UploadLogs />
+            <FileUpload />
           </div>
 
           {/* Results */}
@@ -47,6 +48,11 @@ const Index = () => {
               <DonutChart value={3.92} title="TimeStamp" />
               <DonutChart value={3.3} title="Boot-temp" />
             </div>
+          </div>
+
+          {/* Upload Logs */}
+          <div className="lg:col-span-2 animate-fade-up" style={{ animationDelay: '0.4s' }}>
+            <UploadLogs />
           </div>
         </div>
       </main>
